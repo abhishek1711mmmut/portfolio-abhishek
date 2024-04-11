@@ -155,7 +155,7 @@ a{
 }
 .user-image{
     padding: 2.5rem;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
     transition: all 1s;
     animation: scaleImage 5s linear infinite;
 }
@@ -168,16 +168,16 @@ a{
 @keyframes scaleImage{
     0%{
         transform: scale(1);
-        filter: grayscale(1);
+        /* filter: grayscale(1); */
     }
     50%{
         transform: scale(1.1);
-        filter: grayscale(0);
+        /* filter: grayscale(0); */
         box-shadow: 3px 3px 10px black;
     }
     100%{
         transform: scale(1);
-        filter: grayscale(1);
+        /* filter: grayscale(1); */
     }
 }
 .icon-dots{
