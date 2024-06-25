@@ -410,8 +410,13 @@ a{
     transform: scale(1.1); 
 }
 
-#project1{
+#project0{
     background-image: url(./images/projects/Project1.png);
+    margin-left: 120px;
+}
+
+#project1{
+    background-image: url(./images/projects/Project0.png);
 }
 #project2{
     margin-left: 120px;
