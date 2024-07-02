@@ -40,7 +40,7 @@
                         I’m a software developer and here is my portfolio website. Here you’ll learn about my journey as a software developer.
                     </div>
                     <a href="https://www.linkedin.com/in/abhishek-kumar-b39500203/" target="_blank" rel="noopener noreferrer">
-                        <div class="btn-pink" id="btn">Hire me</div>
+                        <div class="btn-pink" id="btn" style="padding: 0.8rem 2.3rem;font-size: 18px;">Hire me</div>
                     </a>
                 </div>
                 <div class="hero-section-right">
@@ -457,7 +457,7 @@
                 </h2>
 
                 <div class="skill-subHeading">
-                    <p>Hi Everyone, My name is Abhishek Kumar.  I’m from ballia, Uttar Pradesh, INDIA.  I’m currently pursuing my bachelor of b.tech from Electronics and Communication Engineering at Madan Mohan Malaviya University of Technology, Gorakhpur and currently, I’m in final year of b.tech.  I am a full stack Web developer. I have experience in developing a variety of web applications using the MERN stack like an edtech platform. I am also proficient in using other technologies, such as Git, version control. I've strong understanding of RESTful APIs and design patterns and I've ability to write clean, maintainable, and efficient code and also good problem-solving and debugging skills. I’m a dynamic person who always accept challenges with positive spirit and always eager to learn.</p>
+                    <p>Hi Everyone, My name is Abhishek Kumar.  I’m from ballia, Uttar Pradesh, INDIA.  I’m persued my bachelor of b.tech from Electronics and Communication Engineering at Madan Mohan Malaviya University of Technology, Gorakhpur. I am a full stack Web developer. I have experience in developing a variety of web applications using the NEXT.JS, MERN stack like edtech platform, blog app and many more. I am also proficient in using other technologies, such as Git, version control. I've strong understanding of RESTful APIs and design patterns and I've ability to write clean, maintainable, and efficient code and also good problem-solving and debugging skills. I’m a dynamic person who always accept challenges with positive spirit and always eager to learn.</p>
                 </div>
             </div>
 
@@ -497,7 +497,7 @@
                 </h3>
 
                 <div class="contactus-form-container">
-                    <form class="form" action="">
+                    <form class="form" id="contactForm" method="POST">
                         <div class="formfield-container">
 
                             <input class="formfield" 
@@ -541,35 +541,37 @@
                 <div class="footer-wrapper">
                     <div class="footer-faded-text">Abhishek Kumar</div>
                     
-                    <div class="link-wrapper">
-                        <div>
-                            <a href="#projects">Projects</a>
+                    <div style="z-index: 10;">
+                        <div class="link-wrapper">
+                            <div>
+                                <a href="#projects">Projects</a>
+                            </div>
+                            <div>
+                                <a href="#skills">Skills</a>
+                            </div>
+                            <div>
+                                <a href="#contactme">Contact me</a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="#skills">Skills</a>
-                        </div>
-                        <div>
-                            <a href="#contactme">Contact me</a>
-                        </div>
-                    </div>
-
-                    <div class="icon-wrapper">
-                        <a href="https://www.linkedin.com/in/abhishek-kumar-b39500203/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-linkedin icon"></i>
-                        </a>
-                        <a href="https://github.com/abhishek1711mmmut" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github icon"></i>
-                        </a>
-                        <a href="https://twitter.com/abhishek002kvs" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-twitter icon"></i>
-                        </a>
-                        <a href="https://www.instagram.com/abhishek002lucky/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram icon"></i>
-                        </a>
-                        <a href="mailto:abhishek1711mmmut@gmail.com">
-                            <i class="fa-regular fa-envelope icon"></i>
-                        </a>
-                    </div>                    
+    
+                        <div class="icon-wrapper">
+                            <a href="https://www.linkedin.com/in/abhishek-kumar-b39500203/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin icon"></i>
+                            </a>
+                            <a href="https://github.com/abhishek1711mmmut" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github icon"></i>
+                            </a>
+                            <a href="https://twitter.com/abhishek002kvs" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-twitter icon"></i>
+                            </a>
+                            <a href="https://www.instagram.com/abhishek002lucky/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram icon"></i>
+                            </a>
+                            <a href="mailto:abhishek1711mmmut@gmail.com">
+                                <i class="fa-regular fa-envelope icon"></i>
+                            </a>
+                        </div>  
+                    </div>                  
                 </div>
             </div>
         </footer>
@@ -590,6 +592,38 @@
         backSpeed: 80,
         backDelay: 1000,
       });
+
+      document.getElementById('contactForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const formObject = Object.fromEntries(formData.entries());
+        const email = formObject.email;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:4000/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formObject)
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+
+                // Clear the form
+                event.target.reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            alert("Failed to send message. Please try again later.");
+        }
+    });
     </script>
 </body>
 </html>
