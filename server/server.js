@@ -9,6 +9,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get("/", (req, res)=>{
+  res.json("Hi, welcome to the Abhishek Portfolio!")
+});
+
 app.post("/send", (req, res) => {
   const { name, email, subject, message } = req.body;
 
