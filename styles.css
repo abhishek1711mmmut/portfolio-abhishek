@@ -634,6 +634,33 @@ a {
   background-size: 100% 100%;
 }
 
+@media (width<640px) {
+  #project14 .project-content {
+    top: 0;
+    bottom: auto;
+    left: 0;
+    max-width: 100%;
+    padding: 1.25em;
+  }
+
+  #project14 .projectc-skills-container {
+    width: 100%;
+    gap: 6px;
+  }
+
+  #project14 .project-heading {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  #project14 .project-subHeading {
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
 @media (width<1024px) {
   #project01,
   #project03,
