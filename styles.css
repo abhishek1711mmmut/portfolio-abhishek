@@ -356,7 +356,6 @@ a {
 .project-card {
   width: 90%;
   height: 550px;
-  /* background-image: url(./images/projects/Project1.png); */
   background-size: cover;
   /* background-repeat: no-repeat; */
   position: relative;
@@ -569,92 +568,92 @@ a {
   transform: scale(1.1);
 }
 
-#project0 {
-  background-image: url(./images/projects/Project1.png);
+#project13 {
+  background-image: url(./images/projects/Project13.png);
   margin-left: 120px;
   background-size: 100% 100%;
 }
 
-#project1 {
-  background-image: url(./images/projects/Project0.png);
-  background-size: 100% 100%;
-}
-#project2 {
-  margin-left: 120px;
-  background-image: url(./images/projects/Project2.png);
-  background-size: 100% 100%;
-}
-#project3 {
-  background-image: url(./images/projects/Project3.png);
-  background-size: 100% 100%;
-}
-#project4 {
-  margin-left: 120px;
-  background-image: url(./images/projects/Project4.png);
-  background-size: 100% 100%;
-}
-#project5 {
-  background-image: url(./images/projects/Project5.png);
-  background-size: 100% 100%;
-}
-#project6 {
-  margin-left: 120px;
-  background-image: url(./images/projects/Project6.png);
-  background-size: 100% 100%;
-}
-#project7 {
-  background-image: url(./images/projects/Project7.png);
-  background-size: 100% 100%;
-}
-#project8 {
-  margin-left: 120px;
-  background-image: url(./images/projects/Project8.png);
-  background-size: 100% 100%;
-}
-#project9 {
-  background-image: url(./images/projects/Project9.png);
-  background-size: 100% 100%;
-}
-#project10 {
-  margin-left: 120px;
-  background-image: url(./images/projects/Project10.png);
-  background-size: 100% 100%;
-}
-#project11 {
-  background-image: url(./images/projects/Project11.JPG);
-  background-size: 100% 100%;
-}
 #project12 {
-  margin-left: 120px;
   background-image: url(./images/projects/Project12.png);
   background-size: 100% 100%;
 }
+#project11 {
+  margin-left: 120px;
+  background-image: url(./images/projects/Project11.png);
+  background-size: 100% 100%;
+}
+#project10 {
+  background-image: url(./images/projects/Project10.png);
+  background-size: 100% 100%;
+}
+#project09 {
+  margin-left: 120px;
+  background-image: url(./images/projects/Project09.png);
+  background-size: 100% 100%;
+}
+#project08 {
+  background-image: url(./images/projects/Project08.png);
+  background-size: 100% 100%;
+}
+#project07 {
+  margin-left: 120px;
+  background-image: url(./images/projects/Project07.png);
+  background-size: 100% 100%;
+}
+#project06 {
+  background-image: url(./images/projects/Project06.png);
+  background-size: 100% 100%;
+}
+#project05 {
+  margin-left: 120px;
+  background-image: url(./images/projects/Project05.png);
+  background-size: 100% 100%;
+}
+#project04 {
+  background-image: url(./images/projects/Project04.png);
+  background-size: 100% 100%;
+}
+#project03 {
+  margin-left: 120px;
+  background-image: url(./images/projects/Project03.png);
+  background-size: 100% 100%;
+}
+#project02 {
+  background-image: url(./images/projects/Project02.png);
+  background-size: 100% 100%;
+}
+#project01 {
+  margin-left: 120px;
+  background-image: url(./images/projects/Project01.png);
+  background-size: 100% 100%;
+}
 
-#project13 {
-  background-image: url(./images/projects/Project13.png);
+#project14 {
+  background-image: url(./images/projects/Project14.png);
   background-size: 100% 100%;
 }
 
 @media (width<1024px) {
-  #project12,
-  #project10,
-  #project8,
-  #project6,
-  #project4,
-  #project2,
-  #project0 {
+  #project01,
+  #project03,
+  #project05,
+  #project07,
+  #project09,
+  #project11,
+  #project13 {
     margin-left: 60px;
   }
 }
 
 @media (width<768px) {
-  #project12,
-  #project10,
-  #project8,
-  #project6,
-  #project4,
-  #project2,
-  #project0 {
+  #project01,
+  #project03,
+  #project05,
+  #project07,
+  #project09,
+  #project11,
+  #project13 {
     margin: auto;
   }
 }
